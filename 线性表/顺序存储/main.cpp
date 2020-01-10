@@ -87,16 +87,23 @@ public:
         }
         len--;
     }
+    T operator [](int index){   //运算符重载方式写get方法
+        T * temp = content;
+        temp += index; //指针指向index位置
+        return *temp;
+    }
 };
 int main(){
     List <int> test(5,1,2,3,4,5); //  第一个参数是长度，后面是可变参数初始化线性表
     cout<<"长度："<<test.length()<<endl;
     cout<<"遍历：";    test.traverse();
     cout<<"1 所在的位置："<<test.index(1)<<endl;
-    cout<<"获得index为1的变量："<<test.get(1)<<endl;
+    cout<<"第一种写法：获得index为1的变量："<<test.get(1)<<endl; //一般方式实现
+    cout<<"第二种写法：获得index为1的变量："<<test[1]<<endl; //运算符重载方式实现
     cout<<"在index=0的位置插入1，";  test.insert(0,1);
     cout<<"插入后，遍历：";    test.traverse();
     cout<<"删除后，遍历：";    test.del(3);    test.traverse();
+    //换一种类型（char)
     List <char> test1(3,'a','b','c');
     test1.traverse();
     test.empty();

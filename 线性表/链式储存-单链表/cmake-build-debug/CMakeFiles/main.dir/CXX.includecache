@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/wuyuanchen/Documents/C++Learning/DataStructure/线性表/链式储存-单链表/main.cpp
+iostream
+-
+cstdarg
+-
+
