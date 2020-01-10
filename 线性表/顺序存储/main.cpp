@@ -17,7 +17,7 @@ public:
         content = new T(100);   //动态开辟内存
         T * p = content;
 
-        va_list args;       //不定参数实现初始化
+        va_list args;       //不定参数实现初始化,cstdarg实现
         va_start(args,count);
         while(count--)
         {
@@ -36,6 +36,7 @@ public:
         return this->len;   //返回长度
     }
     void traverse(){    //遍历线性表
+        if(len == 0){cout<<"null"<<endl;}   //长度为0显示null
         T * head = content;
         for(int i = 0;i <= len-1;i++){  //for循环进行遍历，每次到下一个地址
             cout<<*content<<" ";
@@ -76,6 +77,16 @@ public:
             cout<<"长度超出初始化容量!"<<endl;
         }
     }
+    void del(int index){
+        int count = len - index;
+        T *temp = content;
+        temp += (len - 1);
+        while(count--) {    //执行count次循环
+            *(temp) = *(temp+1);  //将目标位置后的元素向后移动一个
+            temp ++;
+        }
+        len--;
+    }
 };
 int main(){
     List <int> test(5,1,2,3,4,5); //  第一个参数是长度，后面是可变参数初始化线性表
@@ -85,5 +96,10 @@ int main(){
     cout<<"获得index为1的变量："<<test.get(1)<<endl;
     cout<<"在index=0的位置插入1，";  test.insert(0,1);
     cout<<"插入后，遍历：";    test.traverse();
+    cout<<"删除后，遍历：";    test.del(3);    test.traverse();
+    List <char> test1(3,'a','b','c');
+    test1.traverse();
+    test.empty();
+    test.traverse();
     return 0;
 }
