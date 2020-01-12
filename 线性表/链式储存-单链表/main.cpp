@@ -1,3 +1,7 @@
+//功能：线性表的链式储存（单链表）
+//设计者：Wu Yuanchen
+//版本号：2019-1-11
+
 #include <iostream>
 #include <cstdarg>
 using namespace std;
