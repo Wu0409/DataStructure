@@ -3,4 +3,4 @@ project(顺序储存（循环队列）)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(_ main.cpp)
+add_executable(main main.cpp)
