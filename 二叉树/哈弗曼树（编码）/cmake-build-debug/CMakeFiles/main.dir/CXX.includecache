@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/wuyuanchen/Documents/C++Learning/DataStructure/二叉树/哈弗曼树（编码）/main.cpp
+iostream
+-
+vector
+-
+
