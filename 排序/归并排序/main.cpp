@@ -1,6 +1,7 @@
 //功能：排序 - 归并排序
 //设计者：Yuanchen Wu
 //版本号：2019.1.20
+//参考：https://juejin.im/post/5ab4c7566fb9a028cb2d9126
 
 #include <iostream>
 using namespace std;
